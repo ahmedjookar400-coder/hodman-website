@@ -1,0 +1,12 @@
+{
+  "name": "hodman-restaurant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hodman Restaurant operations platform",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

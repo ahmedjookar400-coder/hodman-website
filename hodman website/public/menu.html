@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#23255f">
+  <title>Order online · Hodman Restaurant</title>
+  <meta name="description" content="Browse the full Hodman Restaurant menu in Albarako, Mogadishu, and place an order online.">
+  <link rel="icon" href="/hodman-logo.jpg">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/site-extra.css">
+  <script defer src="/site.js"></script>
+</head>
+<body class="full-menu-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Hodman Restaurant home"><span class="brand-image"><img src="/hodman-logo.jpg" alt=""></span><span class="brand-copy"><strong>Hodman</strong><small>Restaurant · Halls & Cafeteria</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/menu.html" aria-current="page">Full menu</a><a href="/#visit">Visit us</a><a href="/admin.html">Staff workspace</a></nav>
+    <div class="header-actions"><a class="phone-link" href="tel:0613007711">061 300 7711</a><a class="button button-navy button-small" href="#menu-grid">Browse dishes <span aria-hidden="true">↓</span></a></div>
+  </header>
+  <main>
+    <section class="menu-section full-menu-section" id="menu">
+      <div class="section-wrap">
+        <a class="text-link back-home" href="/">← Back to Hodman home</a>
+        <div class="section-heading"><div><span class="eyebrow">MADE WITH HEART, SERVED WITH CARE</span><h1>Our full<br><em>menu.</em></h1><p class="full-menu-intro">Choose a dish to add it to your order. Available dishes and prices are updated by our team.</p></div><div class="menu-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="menu-search" type="search" placeholder="Find a favourite" aria-label="Search menu"></label></div></div>
+        <div class="category-list" id="category-list" aria-label="Filter menu"></div>
+        <div class="product-grid" id="menu-grid"><p class="loading-note">Loading Hodman’s menu…</p></div>
+      </div>
+    </section>
+    <section class="full-menu-help"><p>Need help choosing? <a href="tel:0613007711">Call Hodman · 061 300 7711</a></p></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="/"><span class="brand-image"><img src="/hodman-logo.jpg" alt=""></span><span class="brand-copy"><strong>Hodman</strong><small>Restaurant · Halls & Cafeteria</small></span></a><span>GOOD FOOD, WARM WELCOME.</span><span>© <span id="year"></span> Hodman Restaurant · Mogadishu</span><a class="partner-footer" href="/partner.html">Delivery partners</a><a class="partner-footer" href="/admin.html">Staff workspace</a></footer>
+  <div class="cart-fab" id="cart-fab" hidden><button class="button button-gold" id="open-cart">Your order <span id="cart-count">0</span><b id="cart-total">$0.00</b></button></div>
+  <dialog class="modal" id="cart-modal"><form method="dialog" class="modal-top"><div><span class="eyebrow">YOUR ORDER</span><h2>Ready when you are.</h2></div><button class="modal-close" aria-label="Close">×</button></form><div class="modal-body" id="cart-body"></div><form id="checkout-form" class="form-grid"><label>Your name<input name="name" required minlength="2" autocomplete="name"></label><label>Phone number<input name="phone" required minlength="6" autocomplete="tel" placeholder="061…"></label><label>How would you like it?<select name="orderType"><option value="takeaway">Takeaway</option><option value="delivery">Delivery</option><option value="dine-in">Dine in</option></select></label><label class="delivery-address" hidden>Delivery address<textarea name="address" rows="2"></textarea></label><label class="full-field">Anything we should know?<textarea name="notes" rows="2" placeholder="Order notes (optional)"></textarea></label><button class="button button-navy full-field" type="submit">Place order <span aria-hidden="true">↗</span></button><p class="form-help full-field">Payment is arranged with our team when your order is confirmed.</p></form></dialog>
+  <dialog class="modal small-modal" id="order-confirmation"><form method="dialog" class="modal-top"><div><span class="eyebrow">THANK YOU FOR YOUR ORDER</span><h2>We’ve got it.</h2></div><button class="modal-close" aria-label="Close">×</button></form><div class="confirmation-body"><p>Your order number is</p><strong id="confirmation-number"></strong><p id="confirmation-message">Our team will confirm your order shortly.</p><a class="button button-navy" href="tel:0613007711">Call Hodman ↗</a><a class="text-link" href="/">Back to home</a></div></dialog>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+</body>
+</html>
